@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:300',
+    origin: 'https://my-task-manager-lyart.vercel.app',
     methodes: ["POST", "GET", "PUT", "DELETE", "PATCH"],
     credentials: true
   }));

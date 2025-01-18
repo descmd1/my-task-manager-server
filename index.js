@@ -7,10 +7,12 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'http://localhost:300',
+    methodes: ["POST", "GET", "PUT", "DELETE", "PATCH"],
+    credentials: true
   }));
 app.use(express.json());
-
+mongoose.connect('mongodb+srv://chris-work_101:desbully1@cluster0.yojdwqt.mongodb.net/task-manager?retryWrites=true&w=majority&appName=Cluster0')
 // Routes
 app.use('/api', taskRoutes);
 

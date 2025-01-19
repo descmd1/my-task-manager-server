@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: 'https://my-task-manager-lyart.vercel.app',
+    origin: ['https://my-task-manager-lyart.vercel.app', 'https://taskmaneja.netlify.app'],
     methodes: ["POST", "GET", "PUT", "DELETE", "PATCH"],
     credentials: true
   }));

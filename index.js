@@ -12,12 +12,12 @@ app.use(cors({
     credentials: true
   }));
 app.use(express.json());
-mongoose.connect('mongodb+srv://chris-work_101:desbully1@cluster0.yojdwqt.mongodb.net/task-manager?retryWrites=true&w=majority&appName=Cluster0')
+
 // Routes
 app.use('/api', taskRoutes);
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/task-manager', {
+mongoose.connect('mongodb+srv://chris-work_101:desbully1@cluster0.yojdwqt.mongodb.net/task-manager?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -25,7 +25,7 @@ mongoose.connect('mongodb://localhost:27017/task-manager', {
   .catch((error) => console.log('Error connecting to MongoDB:', error));
 
 // Start the server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// const PORT = process.env.PORT || 5000;
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });

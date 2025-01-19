@@ -12,7 +12,7 @@ const taskSchema = new mongoose.Schema(
     },
     category: {
       type: String,
-      enum: ['work', 'personal', 'urgent'],
+      enum: ['Work', 'Personal', 'Urgent'],
       required: true,
     },
     completed: {
